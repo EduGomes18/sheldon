@@ -1,8 +1,7 @@
 {
-  "name": "sheldon",
+  "name": "sheldon-tr-replace",
   "version": "0.0.1",
   "description": "sheldon CLI",
-  "private": true,
   "bin": {
     "sheldon": "bin/sheldon"
   },
