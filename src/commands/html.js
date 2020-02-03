@@ -8,12 +8,13 @@ const command = {
       let result = data
       let teste = JSON.stringify(result)
 
-      var res = teste.replace('<tr>', '<td>')
-
-      console.log(res)
+      let splice = teste.replace(
+        /<tr>/g,
+        '<table border="0" cellpadding="0" cellspacing="0"> <tr>'
+      )
+      let splice2 = splice.replace(/<\/tr>/g, '</tr> </table>')
+      fs.writeFileSync('index.html', splice2)
     })
-
-    // fs.writeFileSync('index.html', teste)
   }
 }
 
