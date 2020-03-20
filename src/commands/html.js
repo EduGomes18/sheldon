@@ -43,9 +43,7 @@ const command = {
 
       let spliceLast = splice11.replace(/images\//g, "");
 
-      console.log(spliceLast);
-
-      // fs.writeFileSync("index.html", splice11);
+      fs.writeFileSync("index.html", spliceLast);
     });
   }
 };
