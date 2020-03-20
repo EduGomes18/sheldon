@@ -1,25 +1,7 @@
-# sheldon CLI
+Sheldon is an e-mail html helper, he help us to rewrite html files exported from photoshop, you just need to export your file using the name : nov.html and Sheldon will remove and put all the tr tags inside its own table! 
 
-A CLI for sheldon.
+to install : npm -i sheldon-tr-replace -g
 
-## Customizing your CLI
+Principal command : sheldon html
 
-Check out the documentation at https://github.com/infinitered/gluegun/tree/master/docs.
-
-## Publishing to NPM
-
-To package your CLI up for NPM, do this:
-
-```shell
-$ npm login
-$ npm whoami
-$ npm lint
-$ npm test
-(if typescript, run `npm run build` here)
-$ npm publish
-```
-
-# License
-
-MIT - see LICENSE
-
+the output will be one index.html file!
