@@ -31,32 +31,9 @@ const command = {
         'style="display:block; margin:0; padding:0;"'
       );
 
-      let splice10 = splice9.replace(
-        /<table border="0" cellpadding="0" cellspacing="0">/,
-        '<tr> <td> <table border="0" cellpadding="0" cellspacing="0">'
-      );
+      
 
-      let splice11 = splice10.replace(
-        /<\/table><!-- End Save for Web Slices -->/,
-        "</td> </tr> </table>"
-      );
-
-      let splice12 = splice11.replace(/imagens\//g, "");
-
-      let splice13 = splice12.replace(/colspan="."/g, "");
-
-      let splice14 = splice13.replace(/<!-- Save for Web Slices.-->/g, "");
-
-      let splice15 = splice14.replace(
-        /bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"/g,
-        ""
-      );
-
-      let splice16 = splice15.replace(/<table id=".*border/g, "<table border");
-
-      let spliceLast = splice16.replace(/imagens\//g, "");
-
-      fs.writeFileSync("index.html", spliceLast);
+      fs.writeFileSync("index.html", splice9);
     });
   },
 };
