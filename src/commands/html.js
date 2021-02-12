@@ -1,6 +1,6 @@
 const command = {
   name: "html",
-  run: async toolbox => {
+  run: async (toolbox) => {
     const { print, parameters } = toolbox;
     let fs = require("fs");
 
@@ -41,11 +41,24 @@ const command = {
         "</td> </tr> </table>"
       );
 
-      let spliceLast = splice11.replace(/images\//g, "");
+      let splice12 = splice11.replace(/imagens\//g, "");
+
+      let splice13 = splice12.replace(/colspan="."/g, "");
+
+      let splice14 = splice13.replace(/<!-- Save for Web Slices.-->/g, "");
+
+      let splice15 = splice14.replace(
+        /bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"/g,
+        ""
+      );
+
+      let splice16 = splice15.replace(/<table id=".*border/g, "<table border");
+
+      let spliceLast = splice16.replace(/images\//g, "");
 
       fs.writeFileSync("index.html", spliceLast);
     });
-  }
+  },
 };
 
 module.exports = command;
