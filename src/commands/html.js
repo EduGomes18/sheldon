@@ -54,7 +54,7 @@ const command = {
 
       let splice16 = splice15.replace(/<table id=".*border/g, "<table border");
 
-      let spliceLast = splice16.replace(/images\//g, "");
+      let spliceLast = splice16.replace(/imagens\//g, "");
 
       fs.writeFileSync("index.html", spliceLast);
     });
